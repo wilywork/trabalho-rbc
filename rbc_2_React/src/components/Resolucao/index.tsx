@@ -244,7 +244,6 @@ export function Resolucao() {
             } else {
               valorInput = infoColuna.valores.indexOf(valorInput) + 1;
             }
-            debugger;
             relevancia +=
               peso *
               (1 -
