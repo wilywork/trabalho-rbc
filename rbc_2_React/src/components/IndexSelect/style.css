@@ -1,0 +1,147 @@
+/* Layout principal */
+.container {
+  display: flex;
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  box-sizing: border-box;
+  overflow: hidden;
+  width: 100%;
+  border-radius: 8px;
+  /* Use box-shadow para uma borda mais moderna */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+}
+
+/* Estilo da sidebar */
+.sidebar {
+  width: 250px; /* Largura fixa para a sidebar */
+  min-width: 200px; /* Largura mínima para evitar que o conteúdo fique muito comprimido */
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  height: auto;
+  overflow-y: auto;
+  transition: width 0.3s ease-in-out; /* Transição suave para responsividade */
+}
+
+.sidebar h3 {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #444;
+  padding-bottom: 10px;
+}
+
+/* Estilo dos itens da sidebar */
+.sidebar-column-navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sidebar-column-item {
+  padding: 10px;
+  background-color: #444;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  white-space: nowrap; /* Evita que o texto quebre em várias linhas */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Adiciona "..." se o texto for muito longo */
+}
+
+.sidebar-column-item:hover {
+  background-color: #555;
+}
+
+.sidebar-column-item.active {
+  background-color: #666;
+  font-weight: bold;
+}
+
+/* Estilo do conteúdo à direita */
+.content {
+  flex-grow: 1;
+  padding: 30px;
+  background-color: #fff; /* Fundo branco para melhor contraste */
+  overflow-y: auto;
+  height: 100%;
+}
+
+h4 {
+  color: #333; /* Cor mais escura para o título */
+  margin-bottom: 10px;
+}
+
+/* Preferências */
+.preferences {
+  margin-bottom: 20px;
+  display: flex;  /* Alinha os radio buttons horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+}
+
+.preferences label {
+  margin-right: 15px; /* Espaçamento entre os labels */
+}
+
+
+/* Tabela */
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil na tabela */
+  border: 1px solid #ddd; /* Borda mais visível */
+}
+
+.styled-table th,
+.styled-table td {
+  padding: 12px 15px; /* Mais padding */
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.styled-table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+.styled-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.table-container {
+  display: flex;
+  flex-direction: column; /* Itens da tabela um abaixo do outro */
+  gap: 20px;
+}
+
+.table-item {
+  /* Estilos para cada item da tabela, se necessário */
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+  }
+
+  .content {
+    height: auto;
+  }
+}
+
+/* Para telas maiores, a sidebar pode ser menor */
+@media (min-width: 1200px) {
+  .sidebar {
+    width: 200px;
+  }
+}

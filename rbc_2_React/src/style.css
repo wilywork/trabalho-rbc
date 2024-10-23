@@ -1,0 +1,84 @@
+/* Estilo para as abas de navegação */
+.navigation-tabs {
+  display: flex;
+  margin-bottom: -20px;
+}
+
+.main-content{
+  display: flex;
+  gap: 20px; /* Espaçamento entre o FileImport e o conteúdo à direita */
+  margin-top: 20px;
+}
+
+.tab {
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: #f1f1f1;
+  border: 1px solid #ddd;
+  border-radius: 8px 8px 0 0;
+  margin-right: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.tab.active {
+  background-color: #fff;
+  font-weight: bold;
+  border-bottom: 1px solid #fff; /* Remover borda inferior para destacar aba ativa */
+}
+
+.tab:hover {
+  background-color: #e0e0e0;
+}
+
+/* Estilo do conteúdo da aba */
+.tab-content {
+  border-radius: 0 8px 8px 8px;
+  background-color: #fff;
+}
+
+/* Estilo para a tabela de variáveis removidas */
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.styled-table th, .styled-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.styled-table thead {
+  background-color: #f9f9f9;
+}
+
+.removed-columns-container{
+  padding: 10px;
+}
+
+/* Estilo para o botão "Próximo" */
+.next-button-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.next-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.next-button:disabled {
+  background-color: #ccc; /* Cinza quando desabilitado */
+  cursor: not-allowed; /* Cursor indicando que o botão está desabilitado */
+}
+
+.next-button:hover:enabled {
+  background-color: #45a049;
+}
+
